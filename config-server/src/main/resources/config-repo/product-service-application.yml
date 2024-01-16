@@ -1,0 +1,27 @@
+server:
+  port: 9092
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: user
+    password: user
+  zipkin:
+    enabled: true
+    base-url: http://localhost:9411
+    service:
+      name: product-service
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: root
+    url: jdbc:postgresql://localhost:5432/ssa_productservice
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+jwt:
+  secretKey: ${ssa_secretkey}
+  issuer: ${ssa_issuer}
+  audience: ${ssa_audience}

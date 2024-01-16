@@ -1,0 +1,5 @@
+dependencies {
+    implementation libs.springBootElasticSearch
+    implementation libs.springBootSecurity
+    implementation libs.springCloudConfigClient
+}

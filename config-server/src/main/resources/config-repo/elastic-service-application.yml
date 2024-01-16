@@ -1,0 +1,29 @@
+server:
+  port: 9096
+
+spring:
+  security:
+    user:
+      name: user
+      password: 1234
+  zipkin:
+    enabled: true
+    base-url: http://localhost:9411
+    service:
+      name: elastic-service
+  elasticsearch:
+    uris: http://localhost:9200
+
+jwt:
+  secretKey: ${ssa_secretkey}
+  issuer: ${ssa_issuer}
+  audience: ${ssa_audience}
+
+#logging:
+#  level:
+#    root: trace
+#  file:
+#    name: elastic.log
+#  logback:
+#    rollingpolicy:
+#      max-file-size: 1MB

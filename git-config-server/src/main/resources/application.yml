@@ -1,0 +1,18 @@
+server:
+  port: 8888
+
+spring:
+  zipkin:
+    enabled: true
+    base-url: ${zipkin_url}
+    service:
+      name: config-server-git
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/atamertc/ssa-config-server.git
+          default-label: main
+          skip-ssl-validation: true
+          username: atamertc
+          password: ${ssa_git_config_token}
